@@ -16,7 +16,17 @@
     grid-row: 2/3;
     grid-column: 2/3;
 }
+.eyelid{
+    grid-row: 1/2;
+    background-color: rgb(20, 87, 20);
+    height: 100px;
+    width: 201px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    z-index: 3;
+    visibility: hidden;
 
+}
 .eye{
     grid-row: 1/2;
     background-color: white;
