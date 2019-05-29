@@ -3,6 +3,7 @@ const eyelidL = document.getElementById("eyelidL");
 const eyelidR = document.getElementById("eyelidR");
 const mouth = document.querySelector(".mouth");
 const speech = document.getElementById("talkbubble");
+let initSpeech = false;
 
 for (let i = 0; i < eye.length; i++){
     eye[i].addEventListener("mouseover", function(){
@@ -16,11 +17,10 @@ for (let i = 0; i < eye.length; i++){
 }
 
 mouth.addEventListener("mouseover", function(){
+    if (initSpeech === false){
     const name = prompt("Hello, who are you?", "Type Name Here")
     speech.style.visibility = "visible";
     speech.innerHTML = "Hello " + name + ", it's nice to meet you!"
+    initSpeech = true;}
 })
 
-mouth.addEventListener("mouseout", function(){
-    speech.style.visibility = "hidden";
-})
